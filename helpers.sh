@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+# Functions below contain echos and if you put them directly in your bashrc they will break things like scp.
+# So one way to avoid this is to first check if the session is interactive, maybe with something like this in your bashrc:
+# # Check if shell is interactive in order to source things that would otherwise break scp, etc...
+# if [[ $- == *i* ]]; then
+#   . /path/to/helpers.sh
+# fi
+
 function restorePositionalParameters() {
   set -- "${positionalargs[@]}"
 }
