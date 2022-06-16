@@ -56,6 +56,7 @@ else
 fi
 restorePositionalParameters
 
+# regex back references info: https://www.regular-expressions.info/backref.html
 # regex explanation:
 # [0-9][0-9]* : match a digit followed by 0 or more digits
 # \([0-9][0-9]*\) : create a numbered capturing group, capturing group number 1
