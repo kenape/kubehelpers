@@ -63,7 +63,7 @@ restorePositionalParameters
 # \([0-9][0-9]*\)/ : after matching capturing group #1 also match a slash
 # \([0-9][0-9]*\)/\1 : after matching capturing group #1 and the slash match capturing group #1 again (i.e. match two equal numbers with a / between them)
 # \([0-9][0-9]*\)/\1 *Running : after matching capturing group #1 and a slash and capturing group #1 again match 0 or more space and Running
-kubectl $namespace get pods | grep -v "\([0-9][0-9]*\)/*\1 *Running"
+kubectl $namespace get pods | grep -v "\([0-9][0-9]*\)/\1 *Running"
 
 unset namespace
 }
