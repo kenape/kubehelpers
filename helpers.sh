@@ -14,7 +14,7 @@ export -f restorePositionalParameters    # export it so it is visible to things 
 
 function usage-for-shownonreadypods() {
   echo "Usage: ${1} [OPTIONS] [namespace]
-Watches for pods that are not 100% up yet.
+Checks for pods that are not 100% up yet.
 A pod is considered not 100% up yet if status is not 'Running' or if all containers are not ready.
 If no [namespace] is given then the default namespace is used.
 
